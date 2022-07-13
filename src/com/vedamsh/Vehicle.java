@@ -9,7 +9,7 @@ public class Vehicle {
 
 static void specifications(int len, int hei ,int wid){
     System.out.println("Vehicle Dimensions(in mm)");
-    System.out.println("Length : " + len + "height : " + hei + "width : " + wid );
+    System.out.println(" Length : " + len + " Height : " + hei + " Width : " + wid );
 
 }
 
@@ -18,5 +18,7 @@ public int fuel_needed(int distance){
     int fuel = distance/mileage;
     return fuel;
 }
+
+
 
 }
