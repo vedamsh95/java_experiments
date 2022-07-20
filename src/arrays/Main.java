@@ -6,7 +6,11 @@ public class Main {
 
         firstArray cars=new firstArray();
  cars.insert();
+ cars.sublist2();
+ cars.getModels();
 
+ sublist list = new sublist();
+ list.sublist();
 
     }
 }

@@ -8,11 +8,11 @@ import java.util.Collections;
 public class firstArray {
 
     public String[] array1;
-    public String[] models;
+     public ArrayList<String> models = new ArrayList<>();
 
-    public void insert() {
+    public ArrayList<String> insert() {
 
-        ArrayList<String> models = new ArrayList<>();
+
         models.add("BMW");
         models.add("VW");
         models.add("Merc");
@@ -24,9 +24,29 @@ public class firstArray {
         for (String i : models) {
             System.out.println(i);
         }
+return  models;
 
+    }
+    public void sublist2(){
+
+        ArrayList<String> models2 =  (ArrayList<String>)models.clone();
+        System.out.println("Cloned Models: " + models2);
+        ArrayList<String> models_sub = new ArrayList<>(models.subList(1,5));
+        System.out.println("Models Sublist: " + models_sub);
+
+        for(String k: models_sub){
+            System.out.println(k);
+        }
 
     }
 
 
+    //The Setter and Getter Functions are used to access the Array list in other classes.
+    public void setModels(ArrayList<String> models) {
+        this.models = models;
+    }
+
+    public ArrayList<String> getModels() {
+        return models;
+    }
 }
