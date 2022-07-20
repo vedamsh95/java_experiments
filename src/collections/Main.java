@@ -1,4 +1,4 @@
-package arrays;
+package collections;
 
 public class Main {
 
@@ -11,6 +11,9 @@ public class Main {
 
  sublist list = new sublist();
  list.sublist();
+
+ testLinked fruits = new testLinked();
+ fruits.insertLL();
 
     }
 }
