@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class firstArray {
 
@@ -17,6 +18,7 @@ public class firstArray {
         models.add("Ferrari");
         models.add("Audi");
         Collections.sort(models);
+
 
         for (String i : models) {
             System.out.println(i);
@@ -38,6 +40,11 @@ public class firstArray {
             System.out.println(k);
         }
 
+        Iterator k1;
+        k1 = models_sub.iterator();
+        while (k1.hasNext()) {
+            System.out.println("with the iterator function :" + k1.next());
+        }
     }
 
     public ArrayList<String> getModels() {

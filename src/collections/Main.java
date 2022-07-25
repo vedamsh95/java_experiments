@@ -1,11 +1,13 @@
 package collections;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
 
         firstArray cars=new firstArray();
  cars.insert();
@@ -31,5 +33,21 @@ public class Main {
             System.out.println("Roll Number : "+student.getRollnum()+" First Name : "+student.getFirstName()+" Last Name : "+student.getLastName());
         });
 
+        Parentclass test1 = new Parentclass();
+        test1.addition(5,4,6);
+
+        childclass test2 = new childclass();
+        test2.addition(5,4,8);
+
+        System.out.println("Hashmap Implementations");
+
+        Hashmaptest hmap= new Hashmaptest();
+        hmap.Hashmap1();
+        hmap.Hashmap2();
+
+       FileHand filee =new FileHand();
+        filee.filehandler();
+        File_Write filew = new File_Write();
+        filew.write_file();
     }
 }
