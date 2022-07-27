@@ -1,9 +1,6 @@
 package collections;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class File_Write {
 
@@ -11,7 +8,7 @@ public class File_Write {
 try {
 
 
-        File fw =new File("C:\\Users\\vedamsh\\Desktop\\new_File2.txt");
+        File fw =new File("C:\\Users\\vedamsh\\Desktop\\new_File3.txt");
     FileOutputStream fos =new FileOutputStream(fw);
     if (!fw.exists()) {
         fw.createNewFile();
@@ -19,10 +16,17 @@ try {
         System.out.println("File already exist");
     }
 String content = "This is a exapmle of how to write into a file";
+    String content2="This is a appended text.";
     byte[] bytesarray = content.getBytes();
     fos.write(bytesarray);
     fos.flush();
     System.out.println("wrote into the file" );
+
+ FileWriter fw1 = new FileWriter(fw,true);
+ fw1.write(content2);
+ System.out.println("apended the file");
+
+
 
     }catch (IOException e){
     System.out.println("IOexeption occured");
